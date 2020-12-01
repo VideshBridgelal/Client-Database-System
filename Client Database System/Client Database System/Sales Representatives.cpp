@@ -101,4 +101,5 @@ void SalesRepresentatives::SaveToFile(string name, string address, string sale, 
         
         salesRepOut << name << "\t" << address << "\t" << sale << endl;
     }
+    salesRepOut.close();
 }
