@@ -6,19 +6,33 @@
 //  Copyright © 2020 Team 5. All rights reserved.
 //
 
-#ifndef Clients_h
-#define Clients_h
+#ifndef Clients_hpp
+#define Clients_hpp
 
 #include <stdio.h>
+#include <iostream>
 #include <string>
-#include "BaseClass.h"
+#include <vector>
 
-class Clients{
+using namespace std;
+
+class Clients {
     public:
-        
+    Clients();
+    void ReadFromFile(vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector);
+    void AddNewClients(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector);
+    void UpdateClientInfo(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector);
+    void PrintClientInfo(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector);
+    void SaveToFile(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector);
     
-    private:
-        
+    protected:
+    string name;
+    string address;
+    string sale;
+    vector<int> bonusVector;
+    vector<string> clientNameVector;
+    vector<string> clientAddressVector;
+    vector<string> clientSalesVector;
 };
 
 #endif /* Clients_hpp */
