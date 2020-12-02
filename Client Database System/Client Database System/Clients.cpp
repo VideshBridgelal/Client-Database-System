@@ -75,11 +75,16 @@ void Clients::UpdateClientInfo(string name, string address, string sale, vector<
     }
 }
 
-void Clients::PrintClientInfo(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector)
-{
-    cout << clientNameVector << endl;
-    cout << clientAddressVector << endl;
-    cout << clientSalesVector << endl;
+void Clients::PrintClientInfo(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector){
+    unsigned int i;
+    for (i = 0; i < clientNameVector.size(); ++i){
+        name = clientNameVector.at(i);
+        address = clientAddressVector.at(i);
+        sale = clientSalesVector.at(i);
+
+        cout << name << endl;
+        cout << address << endl;
+        cout << sale << endl;
 }
 
 void Clients::SaveToFile(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector){
