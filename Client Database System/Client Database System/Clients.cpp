@@ -90,7 +90,7 @@ void Clients::PrintClientInfo(string name, string address, string sale, vector<s
         address = clientAddressVector.at(i);
         sale = clientSalesVector.at(i);
 
-        if (findName = name)
+        if (findName == name)
         {
             cout << name << ":" << endl;
             cout << address << endl;
