@@ -75,7 +75,8 @@ void Clients::UpdateClientInfo(string name, string address, string sale, vector<
     }
 }
 
-void Clients::PrintClientInfo(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector){
+void Clients::PrintClientInfo(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector)
+{
     unsigned int i;
     for (i = 0; i < clientNameVector.size(); ++i){
         name = clientNameVector.at(i);
@@ -102,5 +103,5 @@ void Clients::SaveToFile(string name, string address, string sale, vector<string
         
         clientOut << name << "\t" << address << "\t" << sale << endl;
     }
-    clientIn.close();
+    clientOut.close();
 }
