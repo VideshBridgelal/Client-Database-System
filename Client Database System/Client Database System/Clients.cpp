@@ -77,15 +77,27 @@ void Clients::UpdateClientInfo(string name, string address, string sale, vector<
 
 void Clients::PrintClientInfo(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector)
 {
+    string findName;
+
+    cout << "Input name: ";
+
+    cin >> findName;
+
     unsigned int i;
-    for (i = 0; i < clientNameVector.size(); ++i){
+    for (i = 0; i < clientNameVector.size(); ++i)
+    {
         name = clientNameVector.at(i);
         address = clientAddressVector.at(i);
         sale = clientSalesVector.at(i);
 
-        cout << name << endl;
-        cout << address << endl;
-        cout << sale << endl;
+        if (findName = name, findAddress = address, findSale = sale)
+        {
+            cout << name << ":" << endl;
+            cout << address << endl;
+            cout << sale << endl;
+        }
+    }
+
 }
 
 void Clients::SaveToFile(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector){
