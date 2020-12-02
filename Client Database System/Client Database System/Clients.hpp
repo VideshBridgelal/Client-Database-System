@@ -26,10 +26,6 @@ class Clients {
     void SaveToFile(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector);
     
     protected:
-    string name;
-    string address;
-    string sale;
-    vector<int> bonusVector;
     vector<string> clientNameVector;
     vector<string> clientAddressVector;
     vector<string> clientSalesVector;
