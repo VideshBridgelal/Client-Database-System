@@ -22,22 +22,22 @@ Clients::Clients(){
 }
 
 void Clients::ReadFromFile(vector<string>& clientNameVector,vector<string>& clientAddressVector, vector<string>& clientSalesVector){
-    ifstream clientInfo;
-    clientInfo.open("ClientsFile.txt");
+    ifstream clientIn;
+    clientIn.open("ClientsFile.txt");
     
-    while(!clientInfo.eof()){                        //Fills the vectors from file
-        clientInfo >> name;
-        clientInfo >> address;
-        clientInfo >> sale;
+    while(!clientIn.eof()){                        //Fills the vectors from file
+        clientIn >> name;
+        clientIn >> address;
+        clientIn >> sale;
         
-        if(!clientInfo.fail()){
+        if(!clientIn.fail()){
             clientNameVector.push_back(name);
             clientAddressVector.push_back(address);
             clientSalesVector.push_back(sale);
         }
     }
     
-    clientInfo.close();
+    clientIn.close();
 }
 
 void Clients::AddNewClients(string name, string address, string sale, vector<string>& clientNameVector, vector<string>& clientAddressVector, vector<string>& clientSalesVector){
@@ -97,4 +97,5 @@ void Clients::SaveToFile(string name, string address, string sale, vector<string
         
         clientOut << name << "\t" << address << "\t" << sale << endl;
     }
+    clientIn.close();
 }
