@@ -19,6 +19,7 @@ using namespace std;
 
 class Sales{
     public:
+        Sales();
         void ReadFromFile(vector<string>& salesVector);
         void PrintSales(vector<string>& salesVector);
         void PrintClientSales(vector<string>& salesVector);
