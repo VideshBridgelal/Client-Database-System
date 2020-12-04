@@ -14,6 +14,10 @@
 
 using namespace std;
 
+Sales::Sales(){
+
+}
+
 void Sales::ReadFromFile(vector<string>& salesVector){
     ifstream salesFileIn;
     salesFileIn.open("SalesFile.txt");
@@ -33,14 +37,14 @@ void Sales::PrintSales(vector<string>& salesVector){
     }
 }
 
-void PrintClientSales(vector<string>& salesVector){
+void Sales::PrintClientSales(vector<string>& salesVector){
     unsigned int i;
     for (i = 0; i < salesVector.size(); ++i){
         cout << salesVector.at(i) << endl;
     }
 }
 
-void UpdateSale(vector<string>& salesVector){
+void Sales::UpdateSale(vector<string>& salesVector){
     string userSale;
     
     cin >> userSale;                            //FIXME: Get client vector and use their index with sales vector.
@@ -54,7 +58,7 @@ void UpdateSale(vector<string>& salesVector){
     }
 }
 
-void SaveToFile(vector<string>& salesVector){
+void Sales::SaveToFile(vector<string>& salesVector){
     ofstream salesFileOut;
     salesFileOut.open("SalesFile.txt");
     
