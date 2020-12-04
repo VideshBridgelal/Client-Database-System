@@ -86,12 +86,12 @@ void Clients::PrintClientInfo(string name, string address, string sale, vector<s
     unsigned int i;
     for (i = 0; i < clientNameVector.size(); ++i)
     {
-        name = clientNameVector.at(i);
-        address = clientAddressVector.at(i);
-        sale = clientSalesVector.at(i);
-
         if (findName == name)
         {
+            name = clientNameVector.at(i);
+            address = clientAddressVector.at(i);
+            sale = clientSalesVector.at(i);
+            
             cout << name << ":" << endl;
             cout << address << endl;
             cout << sale << endl;
@@ -105,7 +105,7 @@ void Clients::SaveToFile(string name, string address, string sale, vector<string
     clientOut.open("ClientsFile.txt");
     
     clientOut << setw(10);                    //Changes the width of each column to 10.
-    clientOut << "Name:\tAddress\tSale:";
+    clientOut << "Name:\tAddress:\tSale:";
     
     unsigned int i;
     for (i = 0; i < clientNameVector.size(); ++i){
