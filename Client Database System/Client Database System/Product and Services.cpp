@@ -42,7 +42,12 @@ void Product_and_Services::AddPrice(vector<int>& priceVector){
     priceVector.push_back(userPrice);
 }
 
-void Product_and_Services::ListServices(){
+void Product_and_Services::ListServices(vector<string>& productVector, vector<string>& descriptionVector){
+    unsigned int i;
+    
+    for (i = 0; i < productVector.size(); ++i){
+        cout << productVector.at(i) << ": " << descriptionVector.at(i) << endl;
+    }
 }
 
 void Product_and_Services::AddNewService(string product, string serviceDescription, vector<string>& productVector, vector<string>& descriptionVector){
